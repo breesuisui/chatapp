@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="output">
+      <section class="chat">
+        <div class="messages header">You are <span id="username"></span>.</div>
+        <ul class="messages content scroll"></ul>
+        <form action=""><input id="m" autocomplete="off" /></form>
+      </section>
+
+      <section class="sidebar">
+        <div class="users header">Online users:</div>
+        <div class="users content">users</div>
+      </section>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

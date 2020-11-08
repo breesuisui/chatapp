@@ -1,0 +1,132 @@
+/*
+global constants
+*/
+:root {
+  --dark-row: #666666;
+  --light-row: #666666;
+  --input-background: #434343;
+  --input-text: #eceff1;
+  --baby-black: #000000;
+  --baby-gray: #999999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 13px Helvetica, Arial;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.output {
+  background: var(--dark-row);
+  overflow: none;
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 15px;
+}
+
+.sidebar {
+  width: 25%;
+  /* background: #d8d8d8; */
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.header {
+  font-size: 20px;
+  color: var(--input-text);
+  text-align: left;
+  padding: 5px;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+}
+
+.messages.content,
+.users.content {
+  list-style-type: none;
+  color: var(--input-text);
+}
+
+.messages.content {
+  overflow-y: auto;
+}
+
+.users.content {
+  overflow: none;
+  flex: 1;
+  background: #d8d8d8;
+}
+
+.messages.content li,
+.users.content li {
+  padding: 5px 10px;
+}
+
+.messages.content li:nth-child(odd) {
+  background: var(--dark-row);
+}
+
+.users.content li {
+  color: var(--dark-row);
+  font-size: 15px;
+}
+
+.messages.content li:nth-child(even) {
+  background: var(--light-row);
+}
+
+form {
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+form input {
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  margin-right: 0.5%;
+  color: var(--input-text);
+  background: var(--input-background);
+  border-radius: 5px;
+}
+
+/* source: https://codepen.io/devstreak/pen/dMYgeO */
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: var(--baby-gray);
+}
+
+.scroll::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--baby-gray);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--baby-black);
+}
